@@ -1,0 +1,18 @@
+/* Colors */
+$basic-white: #ffffff;
+$basic-black: #000000;
+$basic-blue: #00b2ff;
+$background-promo: #1b2d37;
+$basic-text: #666666;
+$border-color: #ebebeb;
+$products-background: #1b2d37;
+$footer-text: #203c42;
+$basic-half-white: rgba(255,255,255, 0.1);
+$basic-grey: #788891;
+
+/* Fonts */
+@mixin fonts($font-weight: 400, $font-size: 14px, $font-color: $basic-white) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $font-color;
+}

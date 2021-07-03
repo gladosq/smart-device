@@ -1,0 +1,155 @@
+.footer {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: $basic-grey;
+    opacity: 0.2;
+    top: 263px;
+  }
+}
+
+.footer__wrapper {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  margin-bottom: 6px;
+  grid-template-areas:
+    "logo nav nav adress adress"
+    "social nav nav adress adress"
+    "copyright years develop develop develop";
+  grid-template-columns: 25% 1fr 25%;
+
+  & h3 {
+    @include fonts(400, 15px, $products-background);
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.footer__nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  margin-left: -2px;
+}
+
+.footer__nav-item {
+  font-size: 15px;
+  opacity: 0.5;
+  min-width: 240px;
+  margin-bottom: 8px;
+
+  &:nth-child(2n+1) {
+    margin-right: 68px;
+  }
+}
+
+.footer__social-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  max-width: 112px;
+  margin-top: 42px;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  @include fonts(700, 25px, $footer-text);
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  grid-area: logo;
+  display: flex;
+  margin-top: 69px;
+
+  .footer__nav-logo-label {
+    @include fonts(500, 12px, $footer-text);
+    font-family: "Roboto", "Arial", sans-serif;
+    color: $basic-grey;
+  }
+
+  & p {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 16px;
+  }
+
+  & svg {
+    margin-top: -4px;
+  }
+}
+
+.footer__social {
+  grid-area: social;
+}
+
+.footer__nav {
+  grid-area: nav;
+  margin-top: 48px;
+  margin-left: 74px;
+}
+
+.footer__adress {
+  grid-area: adress;
+  margin-top: 48px;
+  min-width: 360px;
+  margin-right: -37px;
+
+  & p {
+    line-height: 10px;
+    color: $basic-grey;
+    font-size: 15px;
+  }
+
+  & h3 {
+    margin-bottom: 32px;
+    padding-left: 4px;
+  }
+
+}
+
+.footer__years {
+  grid-area: years;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $basic-grey;
+  margin-top: 56px;
+  margin-left: -126px;
+  max-width: 300px;
+}
+
+.footer__develop {
+  grid-area: develop;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: $basic-grey;
+  margin-top: 56px;
+  font-size: 13px;
+  margin-left: -128px;
+  letter-spacing: 0.04em;
+
+  & p:last-child {
+    margin-right: -12px;
+  }
+}
+
+.footer__copyright {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  grid-area: copyright;
+  color: $basic-grey;
+  margin-top: 56px;
+  max-width: 200px;
+
+}

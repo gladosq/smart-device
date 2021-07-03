@@ -1,0 +1,152 @@
+.feedback {
+  background: $basic-blue;
+}
+
+.feedback__wrapper {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  padding-bottom: 104px;
+  position: relative;
+
+  & h2 {
+    @include fonts(400, 36px, $basic-white);
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    line-height: 50px;
+    padding-top: 62px;
+    padding-left: 110px;
+    margin-bottom: 12px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 671px;
+    height: 641px;
+    background: url("../img/feedback-decoration-2.png");
+    top: -60px;
+    left: -78px;
+  }
+}
+
+.feedback__image {
+  padding-left: 98px;
+  padding-top: 160px;
+}
+
+.feedback__form {
+  padding-left: 98px;
+
+  & fieldset {
+    border: 0;
+    display: flex;
+
+    & input {
+      background: $basic-half-white;
+      border: none;
+      padding: 13px 17px 18px;
+      width: 238px;
+      font-family: "PT Mono", "Arial", sans-serif;
+      color: $basic-white;
+      font-size: 16px;
+
+      &::placeholder {
+        font-family: "PT Mono", "Arial", sans-serif;
+        color: $basic-white;
+        font-size: 16px;
+      }
+
+      &:focus {
+        outline: 2px solid $basic-text;
+      }
+    }
+
+    & textarea {
+      font-family: "PT Mono", "Arial", sans-serif;
+      color: $basic-white;
+      font-size: 16px;
+      background: $basic-half-white;
+      border: none;
+      padding: 13px 17px 18px;
+      min-width: 540px;
+      resize: none;
+      margin-top: 22px;
+      height: 124px;
+
+      &::placeholder {
+        font-family: "PT Mono", "Arial", sans-serif;
+        color: $basic-white;
+        font-size: 16px;
+      }
+
+      &:focus {
+        outline: 2px solid $basic-text;
+      }
+
+    }
+
+    &:first-child input {
+      margin-right: 30px;
+    }
+  }
+
+  & legend {
+    border: 0;
+    color: $basic-white;
+    margin-bottom: 50px;
+  }
+}
+
+.feedback__button {
+  @include fonts(700, 14px, $basic-white);
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  background: none;
+  border: 1px solid $basic-white;
+  border-radius: 4px;
+  padding: 13px 80px;
+  margin-top: 28px;
+  text-transform: uppercase;
+}
+
+.feedback__label {
+  @include fonts(400, 14px, $basic-white);
+  line-height: 16px;
+  display: block;
+  max-width: 300px;
+  padding-left: 30px;
+  margin-left: 38px;
+  margin-top: 36px;
+}
+
+.feedback__checkbox {
+  display: none;
+}
+
+.feedback__checkbox + label {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 1px solid $basic-white;
+    top: 0;
+    left: 0;
+  }
+}
+
+.feedback__checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  background: transparent;
+  border-right: 1px solid $basic-white;
+  border-bottom: 1px solid $basic-white;
+  transform: rotate(45deg);
+  left: 6px;
+  top: 2px;
+}

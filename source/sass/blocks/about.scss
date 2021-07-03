@@ -1,0 +1,50 @@
+.about__wrapper {
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  margin-bottom: 110px;
+}
+
+.about__year {
+  @include fonts(700, 156px);
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  background: url("../img/about-decoration.png");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: rotate(-90deg);
+  position: absolute;
+  left: 26px;
+  top: -10px;
+}
+
+.about__info {
+  padding-left: 302px;
+  padding-top: 54px;
+  padding-right: 110px;
+
+  & p {
+    line-height: 22px;
+  }
+
+  & p:nth-child(1) {
+    @include fonts(400, 36px, $basic-text);
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    margin-bottom: 35px;
+  }
+
+  & p:nth-child(2) {
+    margin-bottom: 22px;
+  }
+}
+
+.about__button {
+  @include fonts(700, 14px, $basic-blue);
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  background: none;
+  border: 1px solid $basic-blue;
+  border-radius: 4px;
+  padding: 13px 50px;
+  margin-top: 22px;
+  text-transform: uppercase;
+}

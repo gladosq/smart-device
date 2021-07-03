@@ -1,0 +1,85 @@
+.header__wrapper {
+  max-width: 1420px;
+  margin: auto;
+  position: relative;
+  z-index: 12;
+
+  & p {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__nav-logo {
+  display: flex;
+  max-width: 300px;
+  margin-top: 32px;
+  margin-left: 10px;
+
+  .header__nav-logo-name {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    color: $basic-white;
+    font-weight: 700;
+    font-size: 25px;
+  }
+
+  .header__nav-logo-label {
+    font-family: "Roboto", "Arial", sans-serif;
+    color: $basic-white;
+    opacity: 0.4;
+    font-weight: 500;
+    font-size: 12px;
+    padding-top: 2px;
+  }
+
+  & p {
+    margin-top: 5px;
+    margin-left: 16px;
+  }
+}
+
+.header__nav-contacts-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-width: 658px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  .header__nav-contacts-item {
+    & a {
+      color: $basic-white;
+    }
+
+    &:nth-child(2) {
+      margin-left: 36px;
+
+      & svg {
+        margin-bottom: -4px;
+      }
+    }
+  }
+}
+
+.header__nav-contacts-item svg {
+  padding-right: 19px;
+}
+
+.header__nav-button {
+  @include fonts(700, 14px, $basic-white);
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  border-radius: 5px;
+  background: none;
+  border: 1px solid $basic-white;
+  padding: 14px 26px;
+  text-transform: uppercase;
+  margin-top: -20px;
+}

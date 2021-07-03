@@ -1,0 +1,85 @@
+.promo {
+  background-image: url("../img/promo-decoration-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: $background-promo;
+  position: relative;
+}
+
+.promo__wrapper {
+  max-width: 1400px;
+  height: 878px;
+  margin: auto;
+  display: flex;
+  margin-top: -100px;
+
+  & h1 {
+    @include fonts(700, 80px, $basic-white);
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-left: -4px;
+    margin-bottom: 25px;
+  }
+
+  & p {
+    @include fonts(400, 22px, $basic-white);
+    line-height: 34px;
+    padding-left: 95px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 66px;
+      height: 2px;
+      background: $basic-white;
+      left: 0;
+      top: 17px;
+    }
+  }
+}
+
+.promo__image {
+  background: url("/img/promo-decoration.png");
+  background-position: 85.5% 98%;
+  padding-top: 60px;
+}
+
+.promo__button {
+  @include fonts(700, 16px, $basic-white);
+  letter-spacing: 0.05em;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  background-color: $basic-blue;
+  border: 0;
+  padding: 18px 46px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-left: 94px;
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+.promo__button-scroll {
+  @include fonts(400, 14px, $basic-white);
+  font-family: "PT Mono", "Arial", sans-serif;
+  background: none;
+  border: 0;
+  opacity: 0.5;
+  position: absolute;
+  left: -46px;
+  bottom: 126px;
+  transform: rotate(-90deg);
+}
+
+.promo__text {
+  margin-top: 250px;
+  min-width: 785px;
+  position: relative;
+  z-index: 10;
+}
+
+.promo__image {
+  margin-top: 200px;
+}
