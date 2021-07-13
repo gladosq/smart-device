@@ -113,7 +113,6 @@
     margin-bottom: 32px;
     padding-left: 4px;
   }
-
 }
 
 .footer__years {
@@ -151,5 +150,380 @@
   color: $basic-grey;
   margin-top: 56px;
   max-width: 200px;
+}
 
+@media (max-width: $desktop-width) {
+  .footer__wrapper {
+    padding-left: 18px;
+    padding-right: 60px;
+    margin-left: 20px;
+  }
+
+  .footer__nav {
+    min-width: 560px;
+  }
+}
+
+@media (max-width: $footer-breakpoint) {
+  .footer__nav {
+    margin-left: 0;
+  }
+
+  .footer__develop {
+    margin-left: 0;
+  }
+
+  .footer__years {
+    margin-left: -40px;
+  }
+}
+
+@media (max-width: $half-desktop-width) {
+  .footer::before {
+    top: 387px;
+  }
+
+  .footer__wrapper {
+    padding-left: 26px;
+    padding-right: 26px;
+    margin-bottom: 16px;
+    grid-template-areas:
+      "logo logo years years social"
+      "nav nav nav adress adress"
+      "develop develop develop develop develop";
+  }
+
+  .footer__logo {
+    margin-top: 22px;
+    min-width: 260px;
+
+    & svg {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  .footer__copyright {
+    display: none;
+  }
+
+  .footer__years {
+    margin-left: 0;
+    padding-left: 107px;
+    margin-top: 28px;
+  }
+
+  .footer__social-list {
+    min-width: 113px;
+    margin-right: -4px;
+    margin-top: 30px;
+  }
+
+  .footer__nav {
+    margin-left: 0;
+    margin-top: 48px;
+
+    & h3 {
+      margin-left: 40px;
+    }
+  }
+
+  .footer__nav-list {
+    margin-left: 40px;
+    min-width: 210px;
+  }
+
+  .footer__adress {
+    margin-top: 48px;
+    margin-right: 50px;
+
+    & h3 {
+      padding-left: 2px;
+    }
+  }
+
+  .footer__nav-item {
+    min-width: 260px;
+  }
+
+  .footer__develop {
+    margin-left: 0;
+    margin-top: 46px;
+
+    & p:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .footer::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: $basic-grey;
+    opacity: 0.2;
+    top: 96px;
+  }
+
+  .footer__wrapper {
+    padding-left: 6px;
+  }
+
+  .footer__nav h3 {
+    margin-left: 0;
+  }
+
+  .footer__nav-list {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .footer__nav-item {
+    &:nth-child(1) {
+      order: -10;
+    }
+
+    &:nth-child(3) {
+      order: -9;
+    }
+
+    &:nth-child(5) {
+      order: -8;
+    }
+
+    &:nth-child(7) {
+      order: -7;
+    }
+  }
+
+  .footer__adress {
+    margin-left: 16px;
+    margin-right: 0;
+  }
+
+  .footer__social {
+    padding-right: 18px;
+  }
+
+  .footer__years {
+    padding-left: 124px;
+    margin-top: 26px;
+  }
+
+  .footer__develop {
+    padding-right: 17px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer::before {
+    background: none;
+  }
+
+  .footer::after {
+    background: none;
+  }
+
+  .footer__wrapper {
+    grid-template-areas:
+      "logo logo logo"
+      "years years years"
+      "social social social"
+      "nav nav nav"
+      "adress adress adress"
+      "develop develop develop";
+    justify-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+  }
+
+  .footer__logo {
+    margin-top: 51px;
+    display: flex;
+    justify-content: center;
+    padding-right: 18px;
+  }
+
+  .footer__years {
+    padding-left: 4px;
+    min-width: 260px;
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  .footer__social {
+    padding-right: 4px;
+  }
+
+  .footer__social-list {
+    margin-top: 24px;
+    min-width: 110px;
+  }
+
+  .footer__nav {
+    margin-left: 0;
+    margin-top: 49px;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    min-width: 100%;
+    position: relative;
+    height: 72px;
+    overflow: hidden;
+    transition: height 0.5s;
+
+    .footer__nav-list {
+      opacity: 0.2;
+      transition: opacity 0.5s;
+    }
+
+    & h3 {
+      padding-top: 13px;
+      padding-left: 15px;
+      cursor: pointer;
+
+      &:hover {
+        color: $basic-blue;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 2px;
+      background: $menu-decoration;
+      right: 18px;
+      top: 36px;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 16px;
+      background: $menu-decoration;
+      transition: all 0.5s;
+      pointer-events: none;
+      right: 25px;
+      top: 29px;
+    }
+
+    .footer__nav-item {
+      padding-left: 15px;
+      padding-right: 20px;
+      line-height: 25px;
+      margin: 0;
+    }
+  }
+
+  .footer__nav--active {
+    height: 276px;
+    overflow: visible;
+
+    &::after {
+      background: transparent;
+      transform: rotate(90deg);
+    }
+
+    .footer__nav-list {
+      opacity: 1;
+    }
+  }
+
+  .footer__nav-list {
+    flex-direction: column;
+  }
+
+  .footer__adress {
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 100%;
+    margin-top: 12px;
+    border-bottom: 1px solid $border-color;
+    position: relative;
+    opacity: 1;
+    height: 60px;
+    overflow: hidden;
+    transition: height 0.5s;
+
+    & h3 {
+      padding-left: 15px;
+      margin-bottom: 31px;
+
+      &:hover {
+        color: $basic-blue;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 2px;
+      background: $menu-decoration;
+      right: 18px;
+      top: 24px;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 16px;
+      background: $menu-decoration;
+      transition: all 0.5s;
+      pointer-events: none;
+      right: 25px;
+      top: 17px;
+    }
+
+    & p {
+      padding-left: 15px;
+      padding-right: 20px;
+      line-height: 25px;
+      margin: 0;
+      opacity: 0.2;
+      transition: opacity 0.5s;
+    }
+  }
+
+  .footer__adress--active {
+    height: 215px;
+    overflow: visible;
+
+    & p {
+      opacity: 1;
+    }
+
+    &::after {
+      background: transparent;
+      transform: rotate(90deg);
+      opacity: 0.2;
+    }
+  }
+
+  .footer__develop {
+    flex-direction: column;
+    margin-top: 20px;
+    padding-right: 0;
+    padding-bottom: 18px;
+
+    & p:last-child {
+      padding-left: 12px;
+      margin-top: 17px;
+    }
+  }
 }

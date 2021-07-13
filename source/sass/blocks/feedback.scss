@@ -7,6 +7,7 @@
   margin: auto;
   display: flex;
   padding-bottom: 104px;
+  justify-content: center;
   position: relative;
 
   & h2 {
@@ -34,6 +35,10 @@
   padding-top: 160px;
 }
 
+.feedback__form-wrapper {
+  margin-right: 22px;
+}
+
 .feedback__form {
   padding-left: 98px;
 
@@ -49,16 +54,16 @@
       font-family: "PT Mono", "Arial", sans-serif;
       color: $basic-white;
       font-size: 16px;
+    }
 
-      &::placeholder {
-        font-family: "PT Mono", "Arial", sans-serif;
-        color: $basic-white;
-        font-size: 16px;
-      }
+    & input::placeholder {
+      font-family: "PT Mono", "Arial", sans-serif;
+      color: $basic-white;
+      font-size: 16px;
+    }
 
-      &:focus {
-        outline: 2px solid $basic-text;
-      }
+    & input:focus {
+      outline: 2px solid $basic-text;
     }
 
     & textarea {
@@ -72,17 +77,16 @@
       resize: none;
       margin-top: 22px;
       height: 124px;
+    }
 
-      &::placeholder {
-        font-family: "PT Mono", "Arial", sans-serif;
-        color: $basic-white;
-        font-size: 16px;
-      }
+    & textarea::placeholder {
+      font-family: "PT Mono", "Arial", sans-serif;
+      color: $basic-white;
+      font-size: 16px;
+    }
 
-      &:focus {
-        outline: 2px solid $basic-text;
-      }
-
+    & textarea:focus {
+      outline: 2px solid $basic-text;
     }
 
     &:first-child input {
@@ -149,4 +153,195 @@
   transform: rotate(45deg);
   left: 6px;
   top: 2px;
+}
+
+@media (max-width: $desktop-width) {
+  .feedback__image {
+    padding-left: 18px;
+
+    & img {
+      width: 400px;
+      height: auto;
+    }
+  }
+
+  .feedback__form-wrapper {
+    & h2 {
+      padding-left: 90px;
+    }
+  }
+
+  .feedback__form {
+    padding-left: 78px;
+  }
+}
+
+@media (max-width: $half-desktop-width) {
+  .feedback__image {
+    & img {
+      width: 300px;
+    }
+  }
+
+  .feedback__form-wrapper {
+    & h2 {
+      padding-left: 70px;
+    }
+  }
+
+  .feedback__form {
+    padding-left: 58px;
+  }
+
+  .feedback__button {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .feedback__image {
+    display: none;
+  }
+
+  .feedback__wrapper {
+    padding-bottom: 93px;
+
+    &::before {
+      background: none;
+    }
+  }
+
+  .feedback__form-wrapper {
+    margin-right: 36px;
+
+    & h2 {
+      font-size: 32px;
+      padding-top: 51px;
+      padding-left: 88px;
+    }
+  }
+
+  .feedback__label {
+    padding-left: 30px;
+    margin-left: 30px;
+  }
+
+  .feedback__form {
+    padding-left: 77px;
+    padding-top: 4px;
+
+    & fieldset:first-child input {
+      width: 247px;
+      padding-bottom: 20px;
+    }
+
+    & fieldset:nth-child(2) textarea {
+      min-width: 556px;
+      margin-top: 24px;
+      padding-bottom: 22px;
+    }
+  }
+
+  .feedback__button {
+    padding-left: 84px;
+    padding-right: 84px;
+    padding-bottom: 15px;
+    margin-top: 32px;
+    min-width: 280px;
+  }
+
+  .feedback__checkbox + label {
+    margin-top: 41px;
+    margin-left: 43px;
+
+    &::before {
+      left: -3px;
+    }
+  }
+
+  .feedback__checkbox:checked + label::after {
+    left: 3px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .feedback__wrapper {
+    padding-left: 15px;
+    padding-bottom: 32px;
+
+    &::before {
+      background: none;
+      width: 0;
+    }
+  }
+
+  .feedback__form-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-right: 4px;
+
+    & h2 {
+      padding-left: 0;
+      font-size: 28px;
+      line-height: 39px;
+      padding-top: 7px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .feedback__form {
+    padding-left: 0;
+    width: 100%;
+
+    & fieldset:nth-child(1) {
+      padding-left: 0;
+      padding-right: 0;
+      flex-direction: column;
+      margin-left: 0;
+      padding-bottom: 0;
+
+      & legend {
+        padding-left: 0;
+        line-height: 21px;
+        margin-bottom: 20px;
+      }
+
+      & input {
+        width: auto;
+        margin-right: 14px;
+        margin-bottom: 32px;
+      }
+    }
+
+    & fieldset:nth-child(2) {
+      padding: 0;
+      margin-left: 0;
+      min-width: 0;
+      width: auto;
+
+      .feedback__question {
+        min-width: 0;
+        width: 100%;
+        margin-right: 14px;
+        margin-top: 0;
+        height: 67px;
+      }
+    }
+
+    & fieldset:nth-child(3) {
+      padding-left: 0;
+      flex-direction: column;
+    }
+  }
+
+  .feedback__button {
+    margin-top: 24px;
+  }
+
+  .feedback__checkbox + label {
+    margin-left: 2px;
+    margin-top: 30px;
+  }
 }

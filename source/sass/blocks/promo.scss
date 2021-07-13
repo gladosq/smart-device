@@ -5,6 +5,7 @@
   background-position: 50% 50%;
   background-color: $background-promo;
   position: relative;
+  z-index: 0;
 }
 
 .promo__wrapper {
@@ -13,6 +14,7 @@
   margin: auto;
   display: flex;
   margin-top: -100px;
+  padding: 0 18px;
 
   & h1 {
     @include fonts(700, 80px, $basic-white);
@@ -43,12 +45,15 @@
 
 .promo__image {
   background: url("/img/promo-decoration.png");
-  background-position: 85.5% 98%;
+  background-position: -8px -82px;
+  background-repeat: no-repeat;
   padding-top: 60px;
+  margin-top: 200px;
 }
 
 .promo__button {
-  @include fonts(700, 16px, $basic-white);
+  @include fonts(700, 16px);
+  display: inline-block;
   letter-spacing: 0.05em;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   background-color: $basic-blue;
@@ -59,6 +64,11 @@
   margin-left: 94px;
   margin-top: 22px;
   cursor: pointer;
+  text-align: center;
+}
+
+.promo__button-mobile {
+  display: none;
 }
 
 .promo__button-scroll {
@@ -71,6 +81,7 @@
   left: -46px;
   bottom: 126px;
   transform: rotate(-90deg);
+  cursor: pointer;
 }
 
 .promo__text {
@@ -78,8 +89,198 @@
   min-width: 785px;
   position: relative;
   z-index: 10;
+
+  & a {
+    color: $basic-white;
+  }
 }
 
-.promo__image {
-  margin-top: 200px;
+@media (max-width: $desktop-width) {
+  .promo__wrapper {
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .promo__image {
+    background-size: contain;
+    background-position: -8px -62px;
+
+    & img {
+      width: 560px;
+      height: auto;
+    }
+  }
+
+  .promo__text {
+    min-width: 0;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: $half-desktop-width) {
+  .promo__wrapper {
+    overflow: hidden;
+
+    & h1 {
+      font-size: 60px;
+      line-height: 70px;
+      max-width: 400px;
+    }
+  }
+
+  .promo__image {
+    background-position: -8px -42px;
+
+    & img {
+      width: 480px;
+    }
+  }
+
+  .promo__text {
+    min-width: 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .promo__wrapper {
+    height: 699px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .promo__text {
+    margin-top: 151px;
+    margin-left: 74px;
+
+    & p {
+      font-size: 18px;
+      line-height: 28px;
+      min-width: 380px;
+      padding-left: 48px;
+      padding-top: 4px;
+
+      &::before {
+        width: 33px;
+        top: 19px;
+      }
+    }
+  }
+
+  .promo__image {
+    position: relative;
+    margin-top: 66px;
+    right: -10%;
+
+    & img {
+      z-index: 2;
+      width: 470px;
+    }
+  }
+
+  .promo__button {
+    margin-left: 48px;
+    margin-top: 36px;
+    min-width: 378px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .promo__button-scroll {
+    display: none;
+  }
+}
+
+@media (max-width: $half-tablet-width) {
+  .promo__image {
+    right: -31.2%;
+    background: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 466px;
+      background: url("../img/promo-decoration-tablet.png");
+      background-size: cover;
+      top: -53px;
+      left: -70px;
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .promo {
+    padding-top: 30px;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 446px;
+      background: url("../img/promo-decoration-tablet.png");
+      background-size: contain;
+      top: -8px;
+      right: -160px;
+    }
+  }
+
+  .promo__wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 617px;
+    margin-top: 0;
+  }
+
+  .promo__image {
+    right: -16px;
+    padding: 0;
+    margin-bottom: -65px;
+
+    & img {
+      width: 301px;
+      height: 220px;
+    }
+
+    &::before {
+      background: none;
+    }
+  }
+
+  .promo__text {
+    margin-top: 0;
+    margin-left: 0;
+
+    & h1 {
+      font-size: 40px;
+      line-height: 47px;
+      margin-bottom: 23px;
+    }
+
+    & p {
+      min-width: 0;
+      margin-top: 0;
+      margin-bottom: 4px;
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+
+  .promo__button {
+    margin-bottom: 70px;
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .promo__button-desktop {
+    display: none;
+  }
+
+  .promo__button-mobile {
+    display: block;
+  }
 }

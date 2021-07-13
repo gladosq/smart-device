@@ -7,8 +7,10 @@ $basic-text: #666666;
 $border-color: #ebebeb;
 $products-background: #1b2d37;
 $footer-text: #203c42;
-$basic-half-white: rgba(255,255,255, 0.1);
+$basic-half-white: rgba(255, 255, 255, 0.1);
 $basic-grey: #788891;
+$menu-decoration: #c4c4c4;
+$red-color: #8b0000;
 
 /* Fonts */
 @mixin fonts($font-weight: 400, $font-size: 14px, $font-color: $basic-white) {
@@ -16,3 +18,11 @@ $basic-grey: #788891;
   font-size: $font-size;
   color: $font-color;
 }
+
+/* Breakpoints */
+$desktop-width: 1600px;
+$footer-breakpoint: 1300px;
+$half-desktop-width: 1200px;
+$tablet-width: 1023px;
+$half-tablet-width: 840px;
+$mobile-width: 767px;

@@ -1,0 +1,226 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 490px;
+  height: 605px;
+  background: $basic-blue;
+  z-index: 20;
+  animation: slide-up-down 0.5s 1 cubic-bezier(0.17, 0.84, 0.44, 1);
+}
+
+.modal__wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+
+  & h2 {
+    @include fonts(400, 28px, $basic-white);
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    margin-bottom: 14px;
+  }
+
+  & input {
+    background: $basic-half-white;
+    border: none;
+    padding: 13px 17px 18px;
+    width: 374px;
+    font-family: "PT Mono", "Arial", sans-serif;
+    color: $basic-white;
+    font-size: 16px;
+    margin-bottom: 34px;
+
+    &::placeholder {
+      font-family: "PT Mono", "Arial", sans-serif;
+      color: $basic-white;
+      font-size: 16px;
+    }
+
+    &:focus {
+      outline: 2px solid $basic-text;
+    }
+  }
+
+  & textarea {
+    font-family: "PT Mono", "Arial", sans-serif;
+    color: $basic-white;
+    font-size: 16px;
+    background: $basic-half-white;
+    border: none;
+    padding: 13px 17px 18px;
+    width: 374px;
+    resize: none;
+    margin-top: -6px;
+    height: 76px;
+
+    &::placeholder {
+      font-family: "PT Mono", "Arial", sans-serif;
+      color: $basic-white;
+      font-size: 16px;
+    }
+
+    &:focus {
+      outline: 2px solid $basic-text;
+    }
+  }
+
+  & p {
+    border: 0;
+    color: $basic-white;
+    padding-left: 1px;
+    line-height: 22px;
+    padding-right: 40px;
+    margin-bottom: 34px;
+    margin-top: 0;
+  }
+}
+
+.modal__button {
+  @include fonts(700, 14px, $basic-white);
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  background: none;
+  border: 1px solid $basic-white;
+  border-radius: 4px;
+  padding: 13px 80px;
+  margin-top: 31px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:disabled {
+    border: 1px solid $basic-grey;
+    color: $basic-grey;
+    cursor: default;
+  }
+}
+
+.modal__label {
+  @include fonts(400, 14px, $basic-white);
+  line-height: 16px;
+  display: block;
+  max-width: 320px;
+  padding-left: 30px;
+  margin-left: 18px;
+  margin-top: 34px;
+}
+
+.modal__checkbox + label {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 1px solid $basic-white;
+    top: 2px;
+    left: -18px;
+  }
+}
+
+.modal__checkbox--invalid + label {
+  &::before {
+    animation: pulse 1s 1 linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+.modal__checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  background: transparent;
+  border-right: 1px solid $basic-white;
+  border-bottom: 1px solid $basic-white;
+  transform: rotate(45deg);
+  left: -12px;
+  top: 4px;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 20px;
+  right: 17px;
+  width: 26px;
+  height: 26px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 1px;
+    right: 2px;
+    background: $basic-white;
+    transform: rotate(-45deg);
+    outline: transparent;
+    transition: all 0.3s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 1px;
+    right: 2px;
+    background: $basic-white;
+    transform: rotate(45deg);
+    outline: transparent;
+    transition: all 0.3s;
+  }
+
+  &:hover::before {
+    transform: rotate(45deg);
+    outline: 1px solid $basic-white;
+  }
+
+  &:hover::after {
+    transform: rotate(135deg);
+    outline: 1px solid $basic-white;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@keyframes slide-up-down {
+  0% {
+    transform: translateY(-100%) translateX(-50%);
+  }
+  40%
+  {
+    transform: translateY(-47%) translateX(-50%);
+  }
+  100%
+  {
+    transform: translateY(-50%) translateX(-50%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    border: 1px solid $red-color;
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.25);
+  }
+  7% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+    border: 1px solid $red-color;
+  }
+}
