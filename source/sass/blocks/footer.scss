@@ -50,6 +50,14 @@
   &:nth-child(2n+1) {
     margin-right: 68px;
   }
+
+  & a:hover {
+    color: $basic-blue;
+  }
+
+  & a:active {
+    opacity: 0.7;
+  }
 }
 
 .footer__social-list {
@@ -60,6 +68,16 @@
   max-width: 112px;
   margin-top: 42px;
   justify-content: space-between;
+}
+
+.footer__social-item {
+  & svg:hover {
+    opacity: 0.4;
+  }
+
+  & svg:active {
+    opacity: 0.8;
+  }
 }
 
 .footer__logo {
