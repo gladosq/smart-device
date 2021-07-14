@@ -1,5 +1,5 @@
 .promo {
-  background-image: url("../img/promo-decoration-2.png");
+  background: url("../img/promo-decoration-2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -54,6 +54,7 @@
 .promo__button {
   @include fonts(700, 16px);
   display: inline-block;
+  vertical-align: baseline;
   letter-spacing: 0.05em;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   background-color: $basic-blue;
@@ -295,5 +296,15 @@
 
   .promo__button-mobile {
     display: block;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .promo {
+    background: url("../img/promo-decoration-2@2x.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: $background-promo;
   }
 }

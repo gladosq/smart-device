@@ -1,9 +1,9 @@
 (function () {
-  const formButton = document.querySelector('.feedback__button');
-  const inputName = document.querySelector('.feedback__name');
-  const inputPhone = document.querySelector('.feedback__phone');
-  const inputText = document.querySelector('.feedback__question');
-  const inputCheckbox = document.querySelector('.feedback__checkbox');
+  const formButton = document.querySelector('.modal__button');
+  const inputName = document.querySelector('.modal__name');
+  const inputPhone = document.querySelector('.modal__phone');
+  const inputText = document.querySelector('.modal__question');
+  const inputCheckbox = document.querySelector('.modal__checkbox');
 
   let maskOptions = {
     mask: '+{7}(000)000-00-00'
@@ -34,10 +34,10 @@
   function checkValidityCheckbox() {
     if (!inputCheckbox.checked) {
       formButton.disabled = true;
-      inputCheckbox.classList.add('feedback__checkbox--invalid');
+      inputCheckbox.classList.add('modal__checkbox--invalid');
     } else {
-      if (inputCheckbox.classList.contains('feedback__checkbox--invalid')) {
-        inputCheckbox.classList.remove('feedback__checkbox--invalid');
+      if (inputCheckbox.classList.contains('modal__checkbox--invalid')) {
+        inputCheckbox.classList.remove('modal__checkbox--invalid');
         formButton.disabled = false;
       }
     }

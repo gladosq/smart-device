@@ -11,13 +11,7 @@ $basic-half-white: rgba(255, 255, 255, 0.1);
 $basic-grey: #788891;
 $menu-decoration: #c4c4c4;
 $red-color: #8b0000;
-
-/* Fonts */
-@mixin fonts($font-weight: 400, $font-size: 14px, $font-color: $basic-white) {
-  font-weight: $font-weight;
-  font-size: $font-size;
-  color: $font-color;
-}
+$background-footer: #fafafa;
 
 /* Breakpoints */
 $desktop-width: 1600px;

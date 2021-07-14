@@ -52,6 +52,7 @@
   },
   "eslintIgnore": [
     "form.js",
+    "form-modal.js",
     "vendor.js"
   ]
 }

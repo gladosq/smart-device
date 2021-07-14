@@ -1,14 +1,16 @@
-const footerNav = document.querySelector('.footer__nav');
-const footerAdress = document.querySelector('.footer__adress');
+(function () {
+  const footerNav = document.querySelector('.footer__nav');
+  const footerAddress = document.querySelector('.footer__address');
 
-function noJsCompatibility() {
-  if (footerNav.classList.contains('footer__nav--active')) {
-    footerNav.classList.remove('footer__nav--active');
+  function noJsCompatibility() {
+    if (footerNav.classList.contains('footer__nav--active')) {
+      footerNav.classList.remove('footer__nav--active');
+    }
+
+    if (footerAddress.classList.contains('footer__address--active')) {
+      footerAddress.classList.remove('footer__address--active');
+    }
   }
 
-  if (footerAdress.classList.contains('footer__adress--active')) {
-    footerAdress.classList.remove('footer__adress--active');
-  }
-}
-
-noJsCompatibility();
+  noJsCompatibility();
+})();

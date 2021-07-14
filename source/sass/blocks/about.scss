@@ -24,7 +24,6 @@
   padding-right: 110px;
 
   & p {
-    line-height: 22px;
     color: $basic-text;
     line-height: 21.5px;
     font-size: 16px;
@@ -104,7 +103,7 @@
 
   .about__tablet-decoration {
     display: inline-block;
-
+    vertical-align: baseline;
   }
 
   .about__button {

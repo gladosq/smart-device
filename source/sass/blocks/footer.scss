@@ -1,5 +1,6 @@
 .footer {
   position: relative;
+  background: $background-footer;
 
   &::before {
     content: "";
@@ -18,8 +19,8 @@
   display: grid;
   margin-bottom: 6px;
   grid-template-areas:
-    "logo nav nav adress adress"
-    "social nav nav adress adress"
+    "logo nav nav address address"
+    "social nav nav address address"
     "copyright years develop develop develop";
   grid-template-columns: 25% 1fr 25%;
 
@@ -115,20 +116,30 @@
   margin-left: 74px;
 }
 
-.footer__adress {
-  grid-area: adress;
+.footer__address {
+  grid-area: address;
   margin-top: 48px;
   min-width: 360px;
   margin-right: -37px;
 
-  & p {
-    line-height: 10px;
-    color: $basic-grey;
+  & a {
+    display: block;
+    color: $basic-black;
     font-size: 15px;
+    opacity: 0.5;
+    margin-bottom: 8px;
+
+    &:hover {
+      color: $basic-blue;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 
   & h3 {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     padding-left: 4px;
   }
 }
@@ -207,7 +218,7 @@
     margin-bottom: 16px;
     grid-template-areas:
       "logo logo years years social"
-      "nav nav nav adress adress"
+      "nav nav nav address address"
       "develop develop develop develop develop";
   }
 
@@ -251,7 +262,7 @@
     min-width: 210px;
   }
 
-  .footer__adress {
+  .footer__address {
     margin-top: 48px;
     margin-right: 50px;
 
@@ -316,7 +327,7 @@
     }
   }
 
-  .footer__adress {
+  .footer__address {
     margin-left: 16px;
     margin-right: 0;
   }
@@ -350,7 +361,7 @@
       "years years years"
       "social social social"
       "nav nav nav"
-      "adress adress adress"
+      "address address address"
       "develop develop develop";
     justify-items: center;
     padding-left: 0;
@@ -393,8 +404,8 @@
     transition: height 0.5s;
 
     .footer__nav-list {
-      opacity: 0.2;
-      transition: opacity 0.5s;
+      opacity: 0;
+      transition: opacity 0.5s 0.2s;
     }
 
     & h3 {
@@ -460,7 +471,7 @@
     flex-direction: column;
   }
 
-  .footer__adress {
+  .footer__address {
     margin-left: 0;
     margin-right: 0;
     min-width: 100%;
@@ -475,6 +486,7 @@
     & h3 {
       padding-left: 15px;
       margin-bottom: 31px;
+      cursor: pointer;
 
       &:hover {
         color: $basic-blue;
@@ -508,22 +520,22 @@
       top: 17px;
     }
 
-    & p {
+    & a {
       padding-left: 15px;
       padding-right: 20px;
       line-height: 25px;
       margin: 0;
-      opacity: 0.2;
-      transition: opacity 0.5s;
+      opacity: 0;
+      transition: all 0.5s 0.1s;
     }
   }
 
-  .footer__adress--active {
+  .footer__address--active {
     height: 215px;
     overflow: visible;
 
-    & p {
-      opacity: 1;
+    & a {
+      opacity: 0.5;
     }
 
     &::after {

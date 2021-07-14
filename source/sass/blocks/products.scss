@@ -39,6 +39,8 @@
   }
 
   & a {
+    position: absolute;
+    top: 0;
     display: block;
     width: 100%;
     height: 100%;
@@ -53,42 +55,17 @@
     font-family: "Roboto Condensed", "Arial", sans-serif;
   }
 
-  &:nth-child(1)::before {
-    content: "";
-    position: absolute;
-    background: url("../img/products-1.png");
+  & img {
     opacity: 0.2;
     width: 100%;
-    height: 620px;
-    right: 0;
-    z-index: 0;
-    pointer-events: none;
-  }
-
-  &:nth-child(2)::before {
-    content: "";
-    position: absolute;
-    background: url("../img/products-2.png");
-    opacity: 0.2;
-    width: 100%;
-    height: 620px;
-    pointer-events: none;
-  }
-
-  &:nth-child(3)::before {
-    content: "";
-    position: absolute;
-    background: url("../img/products-3.png");
-    opacity: 0.2;
-    width: 100%;
-    height: 620px;
-    pointer-events: none;
+    height: auto;
   }
 }
 
 .products__button {
   position: absolute;
   display: inline-block;
+  vertical-align: baseline;
   right: 0;
   bottom: 0;
   width: 63px;
@@ -108,6 +85,63 @@
     transform: rotate(-45deg);
     left: 24px;
     top: 28px;
+  }
+}
+
+@media (max-width: $footer-breakpoint) {
+  .products__item {
+    & img {
+      display: none;
+    }
+
+    &:nth-child(1)::before {
+      content: "";
+      position: absolute;
+      background: url("../img/products-1.png");
+      opacity: 0.2;
+      width: 100%;
+      height: 620px;
+      right: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    &:nth-child(2)::before {
+      content: "";
+      position: absolute;
+      background: url("../img/products-2.png");
+      opacity: 0.2;
+      width: 100%;
+      height: 620px;
+      pointer-events: none;
+    }
+
+    &:nth-child(3)::before {
+      content: "";
+      position: absolute;
+      background: url("../img/products-3.png");
+      opacity: 0.2;
+      width: 100%;
+      height: 620px;
+      pointer-events: none;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    .products__item:nth-child(1)::before {
+      background: url("../img/products-1@2x.png");
+      background-size: cover;
+    }
+
+    .products__item:nth-child(2)::before {
+      background: url("../img/products-2@2x.png");
+      background-size: cover;
+    }
+
+    .products__item:nth-child(3)::before {
+      background: url("../img/products-3@2x.png");
+      background-size: cover;
+    }
   }
 }
 
@@ -173,6 +207,23 @@
       margin-top: 50px;
     }
   }
+
+  @media (min-resolution: 2dppx) {
+    .products__item:nth-child(1)::before {
+      background: url("../img/products-1-tablet@2x.png");
+      background-size: cover;
+    }
+
+    .products__item:nth-child(2)::before {
+      background: url("../img/products-2-tablet@2x.png");
+      background-size: cover;
+    }
+
+    .products__item:nth-child(3)::before {
+      background: url("../img/products-3-tablet@2x.png");
+      background-size: cover;
+    }
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -216,6 +267,23 @@
 
     &:nth-child(3) p {
       margin-top: 29px;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    .products__item:nth-child(1)::before {
+      background: url("../img/products-1-mobile@2x.png");
+      background-size: cover;
+    }
+
+    .products__item:nth-child(2)::before {
+      background: url("../img/products-2-mobile@2x.png");
+      background-size: cover;
+    }
+
+    .products__item:nth-child(3)::before {
+      background: url("../img/products-3-mobile@2x.png");
+      background-size: cover;
     }
   }
 }

@@ -93,10 +93,20 @@
   text-transform: uppercase;
   cursor: pointer;
 
+  &:hover {
+    background: $basic-white;
+    color: $basic-blue;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
   &:disabled {
     border: 1px solid $basic-grey;
     color: $basic-grey;
     cursor: default;
+    background: $basic-blue;
   }
 }
 
