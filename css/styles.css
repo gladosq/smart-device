@@ -301,8 +301,8 @@
 @media (max-width: 1600px) {
   .promo__wrapper {
     justify-content: center;
-    padding-left: 50px;
-    padding-right: 50px; }
+    padding-right: 50px;
+    padding-left: 50px; }
   .promo__image {
     background-size: contain;
     background-position: -8px -62px; }
