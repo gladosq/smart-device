@@ -128,12 +128,14 @@
   function showModal() {
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');
+    document.body.classList.add('no-scroll');
     modalInputName.focus();
   }
 
   function hideModal() {
     modal.classList.add('hidden');
     overlay.classList.add('hidden');
+    document.body.classList.remove('no-scroll');
   }
 
   function hideModalHandler(evt) {

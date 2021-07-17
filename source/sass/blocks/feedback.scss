@@ -6,7 +6,7 @@
   max-width: 1400px;
   margin: auto;
   display: flex;
-  padding-bottom: 104px;
+  padding-bottom: 100px;
   justify-content: center;
   position: relative;
 
@@ -27,12 +27,14 @@
     background: url("../img/feedback-decoration-2.png");
     top: -60px;
     left: -78px;
+    z-index: 0;
   }
 }
 
 .feedback__image {
   padding-left: 98px;
   padding-top: 160px;
+  z-index: 10;
 }
 
 .feedback__form-wrapper {
@@ -49,6 +51,7 @@
     & input {
       background: $basic-half-white;
       border: none;
+      border-radius: 0;
       padding: 13px 17px 18px;
       width: 238px;
       font-family: "PT Mono", "Arial", sans-serif;

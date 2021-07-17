@@ -14,7 +14,8 @@
   margin: auto;
   display: flex;
   margin-top: -100px;
-  padding: 0 18px;
+  padding: 14px 18px 0;
+
 
   & h1 {
     @include fonts(700, 80px, $basic-white);
@@ -88,7 +89,7 @@
   border: 0;
   opacity: 0.5;
   position: absolute;
-  left: -46px;
+  left: -38px;
   bottom: 126px;
   transform: rotate(-90deg);
   cursor: pointer;
@@ -246,6 +247,7 @@
     align-items: center;
     height: 617px;
     margin-top: 0;
+    padding-top: 0;
   }
 
   .promo__image {

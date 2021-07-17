@@ -5,7 +5,7 @@
 .products__wrapper {
   max-width: 1190px;
   margin: auto;
-  padding-bottom: 127px;
+  padding-bottom: 102px;
   padding-left: 28px;
   padding-right: 10px;
 
@@ -23,6 +23,7 @@
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -33,6 +34,7 @@
   position: relative;
   margin-right: 10px;
   margin-left: 10px;
+  margin-bottom: 24px;
 
   &:hover {
     outline: 1px solid $basic-blue;
@@ -59,6 +61,14 @@
     opacity: 0.2;
     width: 100%;
     height: auto;
+  }
+
+  &:nth-child(3n+4) {
+    margin-right: 20px;
+  }
+
+  &:nth-child(3n+5) {
+    margin-right: auto;
   }
 }
 

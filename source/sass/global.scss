@@ -20,8 +20,13 @@
   left: 0;
   top: 0;
   z-index: 18;
+  overflow: hidden;
 }
 
 .hidden {
   display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

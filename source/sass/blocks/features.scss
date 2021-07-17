@@ -33,7 +33,7 @@
 
 .features__item {
   max-width: 566px;
-  height: 296px;
+  min-height: 298px;
   border: 1px solid $border-color;
   border-left: 3px solid $basic-blue;
   margin-bottom: 30px;
@@ -118,6 +118,7 @@
   }
 
   .features__item {
+    min-height: 0;
     height: auto;
     padding-bottom: 3px;
 
