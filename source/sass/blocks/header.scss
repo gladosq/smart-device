@@ -14,6 +14,7 @@
 .header__nav {
   display: flex;
   justify-content: space-between;
+  min-height: 120px;
 }
 
 .header__nav-logo {
@@ -21,10 +22,6 @@
   max-width: 300px;
   margin-top: 32px;
   margin-left: 12px;
-
-  & svg:hover {
-    fill: $basic-blue;
-  }
 }
 
 .header__nav-logo-mobile {
@@ -38,13 +35,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  min-width: 658px;
   margin-top: 50px;
   margin-left: auto;
   padding-left: 18px;
 
   .header__nav-contacts-item {
     margin-right: 50px;
+    margin-bottom: 8px;
 
     & a {
       color: $basic-white;
@@ -75,6 +72,8 @@
   text-transform: uppercase;
   margin-top: 36px;
   cursor: pointer;
+  min-width: 180px;
+  max-height: 46px;
 
   &:hover {
     border: 1px solid $basic-blue;
@@ -120,7 +119,6 @@
   }
 
   .header__nav-contacts-list {
-    min-width: 0;
     margin-top: 32px;
     margin-right: -12px;
 
@@ -143,6 +141,10 @@
           width: 24px;
           height: 24px;
         }
+      }
+
+      &:nth-child(n+3) {
+        display: none;
       }
     }
   }

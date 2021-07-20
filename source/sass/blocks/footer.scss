@@ -101,10 +101,6 @@
 
   & svg {
     margin-top: -4px;
-
-    &:hover {
-      fill: $basic-blue;
-    }
   }
 }
 
@@ -130,7 +126,7 @@
     font-size: 15px;
     opacity: 0.5;
     margin-bottom: 8px;
-    max-width: 230px;
+    max-width: 170px;
 
     &:hover {
       color: $basic-blue;
@@ -564,9 +560,7 @@
 
     & a {
       padding-left: 15px;
-      padding-right: 20px;
       line-height: 25px;
-      max-width: 180px;
       margin: 0;
       opacity: 0;
       transition: all 0.5s 0.2s;

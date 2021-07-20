@@ -99,7 +99,21 @@
 }
 
 @media (max-width: $footer-breakpoint) {
+  .products__wrapper {
+    & h2 {
+      text-align: center;
+      padding-left: 0;
+      margin-left: -70px;
+    }
+  }
+
+  .products__list {
+    justify-content: center;
+  }
+
   .products__item {
+    width: 310px;
+
     & img {
       display: none;
     }
@@ -174,6 +188,8 @@
       padding-left: 0;
       line-height: 45px;
       padding-bottom: 24px;
+      text-align: left;
+      margin-left: 0;
     }
   }
 
